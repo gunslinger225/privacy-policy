@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Privacy Policy - သေနတ်မမ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;margin:0;padding:0;box-sizing:border-box}
+        body{background:#0d0500;background-image:radial-gradient(ellipse at center,#2c1810 0%,#0d0500 100%);min-height:100vh;font-family:'Georgia','Times New Roman',serif;color:#c8a070;padding:10px}
+        .container{max-width:600px;margin:0 auto;background:linear-gradient(180deg,#1a0c04,#0a0400);border:3px solid #3a2010;border-radius:4px;box-shadow:0 0 0 4px #1a0c04,0 0 0 8px #3a2010,0 0 0 12px #0a0400,0 15px 50px rgba(0,0,0,.8);overflow:hidden}
+        
+        .wanted-header{background:linear-gradient(180deg,#7a5a20,#5a3d10);padding:20px;text-align:center;position:relative;border-bottom:3px solid #c8a030}
+        .wanted-header::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(200,160,48,0.1)" stroke-width="1"/></svg>') repeat;opacity:.3}
+        .wanted-header h1{font-size:2rem;color:#ffd700;text-shadow:2px 2px 0 #5a3000,0 0 15px rgba(255,215,0,.3);letter-spacing:4px;margin-bottom:5px;position:relative;z-index:1}
+        .wanted-header .subtitle{color:#c8a070;font-size:.75rem;font-style:italic;letter-spacing:2px;position:relative;z-index:1}
+        .wanted-badge{width:50px;height:50px;margin:0 auto 10px;position:relative;z-index:1}
+        .wanted-badge::before{content:'★';font-size:3rem;color:#ffd700;filter:drop-shadow(0 0 10px rgba(255,215,0,.5))}
+        
+        .customer-service{background:linear-gradient(180deg,#2a1508,#1a0c04);padding:15px;border-bottom:2px solid #3a2010}
+        .cs-label{color:#ffd700;font-size:.7rem;text-align:center;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;font-weight:bold}
+        .cs-buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+        .cs-btn{padding:10px 20px;border:2px solid #c8a030;border-radius:4px;font-weight:bold;cursor:pointer;font-family:'Georgia',serif;font-size:.85rem;display:flex;align-items:center;gap:8px;transition:.15s;text-transform:uppercase;letter-spacing:1px;min-width:140px;justify-content:center}
+        .cs-btn i{font-size:1.1rem}
+        .cs-btn.telegram{background:linear-gradient(180deg,#0088cc,#006699);color:#fff;border-color:#00aaff}
+        .cs-btn.telegram:hover{background:linear-gradient(180deg,#0099dd,#0077aa);transform:translateY(-2px);box-shadow:0 4px 15px rgba(0,136,204,.4)}
+        .cs-btn.viber{background:linear-gradient(180deg,#7b519d,#6a4288);color:#fff;border-color:#9b61bd}
+        .cs-btn.viber:hover{background:linear-gradient(180deg,#8b61ad,#7a5298);transform:translateY(-2px);box-shadow:0 4px 15px rgba(123,81,157,.4)}
+        .cs-btn:active{transform:translateY(1px)}
+        
+        .content{padding:20px}
+        .section{margin-bottom:25px}
+        .section-title{color:#ffd700;font-size:1rem;font-weight:bold;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #3a2010;display:flex;align-items:center;gap:8px;letter-spacing:1px}
+        .section-title::before{content:'◆';color:#c8a030;font-size:.7rem}
+        .section p{color:#a08060;font-size:.82rem;line-height:1.7;margin-bottom:10px}
+        .section ul{list-style:none;padding-left:0}
+        .section ul li{color:#a08060;font-size:.82rem;line-height:1.7;padding-left:20px;position:relative;margin-bottom:8px}
+        .section ul li::before{content:'▸';position:absolute;left:0;color:#c8a030}
+        .highlight-box{background:rgba(200,160,48,.08);border-left:3px solid #c8a030;padding:12px;border-radius:0 4px 4px 0;margin:15px 0}
+        .highlight-box p{margin-bottom:0}
+        
+        .footer{text-align:center;padding:15px;border-top:2px solid #3a2010;color:#5a3d10;font-size:.7rem;font-style:italic}
+        .footer .last-update{color:#7a5a30}
+        
+        @media(max-width:480px){
+            body{padding:5px}
+            .wanted-header h1{font-size:1.5rem;letter-spacing:2px}
+            .cs-buttons{flex-direction:column;align-items:center}
+            .cs-btn{width:100%;max-width:250px}
+            .content{padding:15px}
+            .section p,.section ul li{font-size:.78rem}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wanted-header">
+            <div class="wanted-badge"></div>
+            <h1>PRIVACY POLICY</h1>
+            <div class="subtitle">သေနတ်မမ - Western Shooter Game</div>
+        </div>
+        
+        <div class="customer-service">
+            <div class="cs-label">⟐ Customer Service ⟐</div>
+            <div class="cs-buttons">
+                <button class="cs-btn telegram" data-url="tg://resolve?domain=BuffaloOff" data-fallback="https://t.me/BuffaloOff">
+                    <i class="fab fa-telegram"></i>
+                    Telegram
+                </button>
+                <button class="cs-btn viber" data-url="viber://chat?number=%2B95750898761" data-fallback="https://viber.com">
+                    <i class="fab fa-viber"></i>
+                    Viber
+                </button>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <div class="section-title">Introduction</div>
+                <p>Howdy, partner! သေနတ်မမ is a free western shooting game designed for pure entertainment. This policy explains how we handle your information - which is simple: we don't collect any.</p>
+                <div class="highlight-box">
+                    <p>By playing သေနတ်မမ, you agree to this straightforward privacy approach.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">What We Don't Collect</div>
+                <p>This here game keeps to itself. We don't gather:</p>
+                <ul>
+                    <li>Your name, email, phone number, or any personal details</li>
+                    <li>Account information or login credentials</li>
+                    <li>Device identifiers or advertising IDs</li>
+                    <li>Location data or IP addresses</li>
+                    <li>Usage statistics or behavioral patterns</li>
+                    <li>Any form of analytics or tracking data</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Offline Operation</div>
+                <p>သေနတ်မမ works completely offline. All game data, scores, and settings are stored locally on your device. Nothing is transmitted to external servers.</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">External Links</div>
+                <p>The app includes contact buttons that link to Telegram and Viber. These third-party services have their own privacy policies which we recommend reviewing. We don't control their data practices.</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">No Advertising</div>
+                <p>Currently, သေနတ်မမ contains no third-party advertisements. If this changes in future updates, this policy will be updated accordingly.</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Your Rights</div>
+                <p>Since we collect nothing, there's no data to access, modify, or delete. Your privacy remains intact by design.</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Policy Updates</div>
+                <p>We may revise this policy if the app's features change. Any updates will be reflected here with a new date.</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Contact</div>
+                <p>For questions or concerns, reach out through the Customer Service buttons above.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p class="last-update">Last updated: August 2024</p>
+            <p>NotFoundException Development</p>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        function openExternalUrl(url, fallbackUrl) {
+            try {
+                if (window.cordova && window.cordova.InAppBrowser) {
+                    window.cordova.InAppBrowser.open(url, '_system');
+                    return;
+                }
+                
+                if (window.Capacitor && window.Capacitor.Plugins.Browser) {
+                    window.Capacitor.Plugins.Browser.open({ url: url });
+                    return;
+                }
+                
+                if (url.startsWith('tg://') || url.startsWith('viber://')) {
+                    const iframe = document.createElement('iframe');
+                    iframe.style.display = 'none';
+                    iframe.src = url;
+                    document.body.appendChild(iframe);
+                    
+                    setTimeout(() => {
+                        if (document.body.contains(iframe)) {
+                            document.body.removeChild(iframe);
+                        }
+                    }, 1000);
+                    
+                    if (fallbackUrl) {
+                        setTimeout(() => {
+                            window.open(fallbackUrl, '_blank');
+                        }, 800);
+                    }
+                    return;
+                }
+                
+                window.open(url, '_blank');
+                
+            } catch (e) {
+                console.error('Failed to open URL:', e);
+                if (fallbackUrl) {
+                    window.open(fallbackUrl, '_blank');
+                }
+            }
+        }
+        
+        document.querySelectorAll('.cs-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const url = this.getAttribute('data-url');
+                const fallback = this.getAttribute('data-fallback');
+                if (url) {
+                    openExternalUrl(url, fallback);
+                }
+            });
+        });
+        
+        if (window.parent !== window) {
+            window.parent.postMessage({ type: "POLICY_LOADED" }, "*");
+        }
+    });
+</script>
+</body>
+</html>
