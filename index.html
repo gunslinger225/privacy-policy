@@ -135,62 +135,37 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        function openExternalUrl(url, fallbackUrl) {
-            try {
-                if (window.cordova && window.cordova.InAppBrowser) {
-                    window.cordova.InAppBrowser.open(url, '_system');
-                    return;
-                }
-                
-                if (window.Capacitor && window.Capacitor.Plugins.Browser) {
-                    window.Capacitor.Plugins.Browser.open({ url: url });
-                    return;
-                }
-                
-                if (url.startsWith('tg://') || url.startsWith('viber://')) {
-                    const iframe = document.createElement('iframe');
-                    iframe.style.display = 'none';
-                    iframe.src = url;
-                    document.body.appendChild(iframe);
-                    
-                    setTimeout(() => {
-                        if (document.body.contains(iframe)) {
-                            document.body.removeChild(iframe);
-                        }
-                    }, 1000);
-                    
-                    if (fallbackUrl) {
-                        setTimeout(() => {
-                            window.open(fallbackUrl, '_blank');
-                        }, 800);
-                    }
-                    return;
-                }
-                
-                window.open(url, '_blank');
-                
-            } catch (e) {
-                console.error('Failed to open URL:', e);
-                if (fallbackUrl) {
-                    window.open(fallbackUrl, '_blank');
-                }
+        // Enhanced function to open external URLs with Cordova/Web support
+function openExternalUrl(url, fallbackUrl = null) {
+    try {
+        if (window.cordova && window.cordova.InAppBrowser) {
+            // APP: Use cordova InAppBrowser if available
+            window.cordova.InAppBrowser.open(url, '_system');
+        } else if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.Browser) {
+            // APP: Use Capacitor Browser plugin if available
+            window.Capacitor.Plugins.Browser.open({ url: url });
+        } else {
+            // WEB: Use window.location.href instead of window.open
+            // This prevents browsers from blocking the deep link as a "popup"
+            
+            // Try to open the deep link (viber:// or tg://)
+            window.location.href = url;
+            
+            // If a fallback is provided, set a timeout to redirect to the web version
+            // If the app opens, the browser goes to the background and the timeout stops naturally
+            if (fallbackUrl) {
+                setTimeout(function() {
+                    window.location.href = fallbackUrl;
+                }, 1500); // 1.5 seconds delay to check if app opened
             }
         }
-        
-        document.querySelectorAll('.cs-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const url = this.getAttribute('data-url');
-                const fallback = this.getAttribute('data-fallback');
-                if (url) {
-                    openExternalUrl(url, fallback);
-                }
-            });
-        });
-        
-        if (window.parent !== window) {
-            window.parent.postMessage({ type: "POLICY_LOADED" }, "*");
+    } catch (e) {
+        // Ultimate fallback
+        if (fallbackUrl) {
+            window.location.href = fallbackUrl;
         }
-    });
+    }
+}
 </script>
 </body>
 </html>
